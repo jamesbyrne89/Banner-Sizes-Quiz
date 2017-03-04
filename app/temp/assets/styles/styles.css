@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url('/assets/fonts/PROXIMANOVA-BLACK.WOFF') format('woff'), url('../PROXIMANOVA-BLACK.woff') format('woff');
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -11,7 +15,7 @@ body {
 	    -ms-flex-align: center;
 	        align-items: center;
 	min-height: 100vh;
-	background: #000;
+	background: #000;    
 }
 .app-wrapper {
 	width: 60%;
@@ -20,7 +24,7 @@ body {
 	background: #fff;
 }
 .title {
-	font-family: helvetica;
+	font-family: 'Proxima Nova Black', helvetica;
 	color: #660099;
 	padding: 1em;
 

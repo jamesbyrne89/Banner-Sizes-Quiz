@@ -1,6 +1,11 @@
 $purple: #660099;
 $green: #00cc00;
 
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url('/assets/fonts/PROXIMANOVA-BLACK.WOFF') format('woff'), url('../PROXIMANOVA-BLACK.woff') format('woff');
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -11,7 +16,7 @@ body {
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
-	background: #000;
+	background: #000;    
 }
 
 .app-wrapper {
@@ -22,7 +27,7 @@ body {
 }
 
 .title {
-	font-family: helvetica;
+	font-family: 'Proxima Nova Black', helvetica;
 	color: $purple;
 	padding: 1em;
 

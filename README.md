@@ -1,4 +1,3 @@
-# ToDo-List
-A simple to-do list app.
+# Banner Sizes Quiz
+A tool to help learn common online display ad sizes
 
-Hosted at https://jamesbyrne89.github.io/ToDo-List.

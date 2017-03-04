@@ -1,0 +1,33 @@
+$purple: #660099;
+$green: #00cc00;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+
+.app-wrapper {
+	width: 60%;
+	margin: auto;
+	height: 50vh;
+	background: #fff;
+}
+
+.title {
+	font-family: helvetica;
+	color: $purple;
+	padding: 1em;
+
+}
+
+.title--span {
+	color: $green;
+}

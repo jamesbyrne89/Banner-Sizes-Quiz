@@ -3,6 +3,7 @@
 <head>
 
 <meta name=viewport content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
         <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="/temp/assets/styles/styles.css">
     <!-- endBuild -->
@@ -11,12 +12,15 @@
     <title>Banner Ad Sizes Quiz</title>
 </head>
 <body>
-  <main class="app-wrapper">
-    <div class="inner-wrapper--left">
+  <main class="modal">
       <h1 class="title">Banner Ads <span class="title--span">Quiz</span></h1>
-    </div>
-    <div class="inner-wrapper--right">
-    </div>
+      <h2 class="question"></h2>
+  <form class="answer-form">
+    <input class="answer-form--width">
+    <span class="cross">X</span>
+    <input class="answer-form--height">
+  </form>
+  <button class="submit">Submit</button>
   </main>
 </body>
 

@@ -18,7 +18,7 @@
 body {
 	min-height: 100vh;
 	font-family: 'open sans';
-	background: #202732; /* fallback for old browsers */
+	background: #252c37; /* fallback for old browsers */
 
 	/*background: -webkit-linear-gradient(to top, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
 
@@ -59,7 +59,7 @@ body {
 .submit {
 	font-weight: bold;
 	cursor: pointer;
-	color: white;
+	color: #ECF0F0;
 	text-transform: uppercase;
 	padding: 0.75em 1em;
 	text-align: center;
@@ -74,11 +74,7 @@ body {
 	background: linear-gradient(to left, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .banner {
-	background: #fe8c00; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top left, #fe8c00, #f83600); /* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(bottom right, #fe8c00, #f83600);
-	background: linear-gradient(to top left, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	margin: 10px;
+	background: #425263;
 	padding: 0.5em;
 	text-transform: uppercase;
 	font-family: 'zwizz bold';
@@ -98,14 +94,13 @@ body {
 	    -ms-flex-align: center;
 	        align-items: center;
 	cursor: pointer;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	color: #202732;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	color: #252c37;
 }
 .banner:hover {
-	-webkit-transform: scale(1.02);
-	transform: scale(1.02);
 	box-shadow: 0px  0px 10px 2px rgba(0, 0, 0, 0.2);
+	background: #DA5754;
 }
 #leaderboard {
 	width: 728px;
@@ -214,10 +209,11 @@ body {
 	display: block;
 	margin-top: 0.5em;
 	font-family: 'zwizz regular';
+	text-transform: none;
 }
 .title {
 	font-family: 'zwizz regular', helvetica;
-	color: #fff;
+	color: #ECF0F0;
 	padding: 0.25em;
 	font-weight: 300;
 	height: 20%;
@@ -229,17 +225,49 @@ body {
 	font-family: 'zwizz bold';
 }
 .clicked-banner {
-	-webkit-transform: scale(1.5);
-	        transform: scale(1.5);
-	position: relative;
+	position: fixed;
 	z-index: 9999;
 	top: 0 !important;
 	left: 0 !important;
 	right: 0 !important;
 	bottom: 0 !important;
+	margin: auto;
 	font-size: 1.25rem !important;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	padding: 0.5em;
+	background: #DA5754;
+	text-transform: uppercase;
+	font-family: 'zwizz bold';
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	color: #252c37;
+}
+.clicked-banner::after {
+	display: block;
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	-webkit-filter: blur();
+	        filter: blur();
 }
 .blur {
 	-webkit-filter: blur(10px) brightness(0.4);
@@ -256,3 +284,21 @@ body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 }
+.blurred-background {
+	height: 100vh;
+	position: relative;
+	
+	
+}
+.popup-wrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	-webkit-filter: brightness(0.5);
+	        filter: brightness(0.5);
+	z-index: 10;
+	-webkit-backdrop-filter: blur();
+	        backdrop-filter: blur();
+}
+
+

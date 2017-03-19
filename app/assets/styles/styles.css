@@ -1,6 +1,9 @@
 $purple: #660099;
 $green: #00cc00;
-$navy: #202732;
+$navy: #252c37;
+$offWhite: #ECF0F0;
+$darkGrey: #425263;
+$paleRed: #DA5754;
 
 @font-face {
 	font-family: 'Proxima Nova Black';
@@ -63,7 +66,7 @@ body {
 .submit {
 	font-weight: bold;
 	cursor: pointer;
-	color: white;
+	color: $offWhite;
 	text-transform: uppercase;
 	padding: 0.75em 1em;
 	text-align: center;
@@ -77,10 +80,7 @@ body {
 	background: linear-gradient(to left, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .banner {
-	background: #fe8c00; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top left, #fe8c00, #f83600); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top left, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	margin: 10px;
+	background: $darkGrey;
 	padding: 0.5em;
 	text-transform: uppercase;
 	font-family: 'zwizz bold';
@@ -91,11 +91,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	transition: all 0.3s;
+	transition: all 0.2s;
 	color: $navy;
 	&:hover {
-	transform: scale(1.02);
 	box-shadow: 0px  0px 10px 2px rgba(0, 0, 0, 0.2);
+	background: $paleRed;
 	}
 }
 #leaderboard {
@@ -205,10 +205,11 @@ body {
 	display: block;
 	margin-top: 0.5em;
 	font-family: 'zwizz regular';
+	text-transform: none;
 }
 .title {
 	font-family: 'zwizz regular', helvetica;
-	color: #fff;
+	color: $offWhite;
 	padding: 0.25em;
 	font-weight: 300;
 	height: 20%;
@@ -221,15 +222,39 @@ body {
 }
 
 .clicked-banner {
-	transform: scale(1.5);
-	position: relative;
+	position: fixed;
 	z-index: 9999;
 	top: 0 !important;
 	left: 0 !important;
 	right: 0 !important;
 	bottom: 0 !important;
+	margin: auto;
 	font-size: 1.25rem !important;
-	transition: all 0.3s;
+	transition: all 0.2s;
+	padding: 0.5em;
+	background: $paleRed;
+	text-transform: uppercase;
+	font-family: 'zwizz bold';
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	color: $navy;
+}
+
+.clicked-banner::after {
+	display: block;
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	filter: blur();
 }
 
 .blur {
@@ -241,3 +266,22 @@ body {
 	display: flex;
 	justify-content: center;
 }
+
+.blurred-background {
+	height: 100vh;
+	position: relative;
+	
+	
+}
+
+
+.popup-wrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	filter: brightness(0.5);
+	z-index: 10;
+	backdrop-filter: blur();
+}
+
+

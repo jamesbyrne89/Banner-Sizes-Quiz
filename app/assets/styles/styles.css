@@ -36,7 +36,6 @@ body {
 	min-height: 1200px;
 	position: relative;
 	left: calc(50vw - 600px);
-	z-index: 5;
 }
 .answer-form {
 	margin: auto;
@@ -80,6 +79,45 @@ body {
 	background: -webkit-linear-gradient(to left, #fe8c00, #f83600); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #fe8c00, #f83600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/** NavBar **/
+
+.navbar {
+	width: 1250px;
+	margin: auto;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.line {
+	width: 80%;
+	display: block;
+	height: 1px;
+	background: #425263;
+	margin: 50px 0 50px 35px;
+	flex-grow: 1;
+}
+
+.navbar__link {
+	color: $paleRed;
+	margin: 40px 0 50px 35px;
+}
+
+.navbar__link:after {
+	font-family: FontAwesome;
+	content: "\f178";
+	margin-left: 0.75rem;
+	line-height: 3px;
+}
+
+.navbar__link:hover .navbar__link:after {
+	margin-left: 0;
+}
+
+
+/** Banners **/
+
 .banner {
 	background: $darkGrey;
 	padding: 0.5em;
@@ -248,7 +286,7 @@ body {
 	color: $navy;
 }
 
-.clicked-banner::after {
+.clicked-banner::before {
 	display: block;
 	content: '';
 	position: fixed;
@@ -256,8 +294,9 @@ body {
 	left: 0;
 	right:0;
 	bottom: 0;
-	filter: blur();
+	filter: blur(10px);
 }
+
 
 .blur {
 	filter: blur(10px) brightness(0.4);
@@ -276,14 +315,22 @@ body {
 	
 }
 
-
+.overlaid {
+	width: 100px;
+	height: 100px;
+	background: lime;
+	position: relative;
+	z-index: 100;
+	display: block;
+}
 .popup-wrap {
-	position: absolute;
-	top: 25vh;
+	position: relative;
+	top: -120vh;
 	height: 75vh;
 	width: 100%;
 	z-index: 10;
-	filter: blur();
+	display: block;
+	filter: blur(10px);
 }
 
 
